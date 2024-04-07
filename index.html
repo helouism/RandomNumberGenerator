@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random Number Generator</title>
+    <link
+      rel="stylesheet"
+      href="https://pyscript.net/releases/2024.1.1/core.css"
+    />
+    <script
+      type="module"
+      src="https://pyscript.net/releases/2024.1.1/core.js"
+    ></script>
+
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+        background-color: #f5f5f5;
+        font-family: Arial, sans-serif;
+        font-weight: bolder;
+      }
+
+      .button-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .number-from,
+      .number-to,
+      .button-container {
+        margin: 20px;
+      }
+
+      #output {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100px;
+        width: 300px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 20px;
+        box-sizing: border-box;
+        background-color: #fff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        font-size: 18px;
+      }
+
+      button {
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+      }
+
+      button:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <div class="number-from">
+        <p>Generate a random number from</p>
+        <input
+          type="text"
+          name="range_start"
+          id="range_start"
+          placeholder="The start range"
+        />
+      </div>
+
+      <div class="number-to">
+        <p>To</p>
+        <input
+          type="text"
+          name="range_end"
+          id="range_end"
+          placeholder="The end range"
+        />
+      </div>
+    </div>
+
+    <button py-click="generate_num">Generate</button>
+
+    <div id="output"></div>
+    <script type="py" src="./main.py"></script>
+  </body>
+</html>
