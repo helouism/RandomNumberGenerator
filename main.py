@@ -3,7 +3,7 @@ from pyscript import document
 
 
 def generate_num(event):
-    """Generate a random number between 1 and 10"""
+    
     input_start = document.querySelector("#range_start")
     num_start = int(input_start.value)
 
