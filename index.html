@@ -8,70 +8,21 @@
       rel="stylesheet"
       href="https://pyscript.net/releases/2024.1.1/core.css"
     />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap"
+      rel="stylesheet"
+    />
     <script
       type="module"
       src="https://pyscript.net/releases/2024.1.1/core.js"
     ></script>
-
-    <style>
-      body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        margin: 0;
-        padding: 0;
-        background-color: #f5f5f5;
-        font-family: Arial, sans-serif;
-        font-weight: bolder;
-      }
-
-      .button-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      .number-from,
-      .number-to,
-      .button-container {
-        margin: 20px;
-      }
-
-      #output {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100px;
-        width: 200px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        padding: 20px;
-        box-sizing: border-box;
-        background-color: #fff;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        font-size: 18px;
-      }
-
-      button {
-        padding: 10px 20px;
-        background-color: #007bff;
-        color: #fff;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        font-size: 16px;
-        transition: background-color 0.3s ease;
-      }
-
-      button:hover {
-        background-color: #0056b3;
-      }
-    </style>
   </head>
   <body>
-    <div>
-      <div class="number-from">
+    <div class="grid-container">
+      <div class="grid-item">
         <p>Generate a random number from</p>
         <input
           type="text"
@@ -81,7 +32,7 @@
         />
       </div>
 
-      <div class="number-to">
+      <div class="grid-item">
         <p>To</p>
         <input
           type="text"
@@ -90,11 +41,14 @@
           placeholder="The end range"
         />
       </div>
+
+      <div class="grid-item">
+        <button py-click="generate_num">Generate</button>
+        <h3>Generated number below</h3>
+        <div id="output"></div>
+      </div>
     </div>
 
-    <button py-click="generate_num">Generate</button>
-
-    <div id="output"></div>
     <script type="py" src="./main.py"></script>
   </body>
 </html>
